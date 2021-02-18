@@ -21,7 +21,8 @@ tombola = {
     93: "Společenská hra Sázky a dostihy",
 }
 
-listek = int(input('Zadej cislo listku: '))
+listek = input('Zadej cislo listku: ')
+listek = int(listek)
 
 if listek in tombola:
     print('Vyhráváš:', tombola[listek])

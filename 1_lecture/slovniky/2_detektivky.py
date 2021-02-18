@@ -16,5 +16,14 @@ sales = {
     "Zločinný steh": 2565,
 }
 
-sales['Noc, ktera me zabila'] = 0
+sales['Noc, která mě zabila'] = 0
+
+print(sales['Vrah zavolá v deset'])
+
+sales['Vrah zavolá v deset'] = sales['Vrah zavolá v deset'] + 100
+print(sales['Vrah zavolá v deset'])
+
 sales['Vrah zavolá v deset'] += 100
+print(sales['Vrah zavolá v deset'])
+
+

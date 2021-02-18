@@ -1,55 +1,23 @@
-morseCode = {
-    "0": "-----",
-    "1": ".----",
-    "2": "..---",
-    "3": "...--",
-    "4": "....-",
-    "5": ".....",
-    "6": "-....",
-    "7": "--...",
-    "8": "---..",
-    "9": "----.",
-    "a": ".-",
-    "b": "-...",
-    "c": "-.-.",
-    "d": "-..",
-    "e": ".",
-    "f": "..-.",
-    "g": "--.",
-    "h": "....",
-    "i": "..",
-    "j": ".---",
-    "k": "-.-",
-    "l": ".-..",
-    "m": "--",
-    "n": "-.",
-    "o": "---",
-    "p": ".--.",
-    "q": "--.-",
-    "r": ".-.",
-    "s": "...",
-    "t": "-",
-    "u": "..-",
-    "v": "...-",
-    "w": ".--",
-    "x": "-..-",
-    "y": "-.--",
-    "z": "--..",
-    ".": ".-.-.-",
-    ",": "--..--",
-    "?": "..--..",
-    "!": "-.-.--",
-    "-": "-....-",
-    "/": "-..-.",
-    "@": ".--.-.",
-    "(": "-.--.",
-    ")": "-.--.-"
+sklad = {
+    "1N4148": 250,
+    "BAV21": 54,
+    "KC147": 147,
+    "2N7002": 97,
+    "BC547C": 10
 }
 
-text = input('Zadej text pro preklad: ')
+kod = input('Zadej kod: ')
+mnozstvi = int(input('Zadej mnozstvi: '))
 
-for znak in text:
-    if znak == ' ':
-        print('/',end='')
+if kod in sklad:
+    na_sklade = sklad[kod]
+
+    if mnozstvi > na_sklade:
+        print('Na sklade neni dostatek kusu, proto muzeme prodat maximalne:',
+              sklad[kod])
+        sklad[kod] = 0
     else:
-        print(morseCode[znak], end='')
+        print('Poptavku je mozne uspokojit v plne vysi')
+        sklad[kod] -= mnozstvi
+else:
+    print('Soucastka neni skladem.')
