@@ -50,6 +50,6 @@ text = input('Zadej text pro preklad: ')
 
 for znak in text:
     if znak == ' ':
-        print('/',end='')
+        print('/', end='')
     else:
         print(morseCode[znak], end='')

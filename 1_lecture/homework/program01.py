@@ -9,6 +9,9 @@ baliky = {
 kod_baliku = input('Zadej kod baliku: ')
 
 if kod_baliku in baliky:
-    print('Balik byl predan kuryrovi')
+    if baliky[kod_baliku]:
+        print('Balik byl predan kuryrovi')
+    else:
+        print('Balik nebyl predan kuryrovi')
 else:
-    print('Balik nebyl predan kuryrovi')
+    print('Balik v systemu nemame')

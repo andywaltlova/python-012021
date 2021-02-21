@@ -15,7 +15,11 @@ if kod in sklad:
     if mnozstvi > na_sklade:
         print('Na sklade neni dostatek kusu, proto muzeme prodat maximalne:',
               sklad[kod])
+        # vyprodano
         sklad[kod] = 0
+
+        # pripadne uplne smazat
+        # sklad.pop(kod)
     else:
         print('Poptavku je mozne uspokojit v plne vysi')
         sklad[kod] -= mnozstvi
