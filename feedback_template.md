@@ -5,8 +5,9 @@
 
 `kod v radku`
 
-```
-kus kodu na vic radku
+```python
+for i in range(10):
+    print(i)
 ```
 
 ### 2. úkol :heavy_check_mark: :x:
