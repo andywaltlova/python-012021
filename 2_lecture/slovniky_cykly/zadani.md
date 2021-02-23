@@ -4,7 +4,8 @@ Gustav je vášnivým čtenářem detektive z našeho nakladatelství a navíc s
 - Napiš program, který spočte celkový počet stran, které Gustav přečetl.
 - Připiš do programu výpočet počtu knih, kterým dal Gustav hodnocení alespoň 8.
 
-`books = [
+``` python
+books = [
     {"title": "Vražda s příliš mnoha notami", "pages": 450, "rating": 5},
     {"title": "Vražda podle knihy", "pages": 524, "rating": 9},
     {"title": "Past", "pages": 390, "rating": 4},
@@ -14,7 +15,8 @@ Gustav je vášnivým čtenářem detektive z našeho nakladatelství a navíc s
     {"title": "Zločinný steh", "pages": 542, "rating": 8},
     {"title": "Zkus mě chytit", "pages": 247, "rating": 7},
     {"title": "Vrah zavolá v deset", "pages": 396, "rating": 6},
-]`
+]
+```
 
 ###2. Vysvědčení
 
@@ -23,7 +25,8 @@ Uvažujme vysvědčení, které máme zapsané jako slovník.
 - Napiš program, který spočte průměrnou známku ze všech předmětů.
 - Uprav program, aby vypsal všechny předměty, ve kterých získal student známku 1.
 
-`schoolReport = {
+```python
+schoolReport = {
   "Český jazyk": 1,
   "Anglický jazyk": 1, 
   "Matematika": 1, 
@@ -34,14 +37,19 @@ Uvažujme vysvědčení, které máme zapsané jako slovník.
   "Výtvarná výchova": 2,
   "Tělešná výchova": 3,
   "Chemie": 4,
-}`
+}
+```
 
 ###3. Poznávací značky
 V následujícím slovníků je evidence automobilů. Klíčem jsou státní poznávací značky (SPZ) a hodnotou je jméno majitele vozu. Napiš program, který vypíše všechny majitele, jejichž vozidlo je registrováno v Plzňském kraji, tj. na druhém místě (index 1!) řetězce v klíči je písmeno P.
 
-`plates = {"4A2 3000": "František Novák",
+```python
+plates = {
+  "4A2 3000": "František Novák",
   "6P5 4747": "Jana Pilná",
   "3B7 3652": "Jaroslav Sečkár",
   "1P5 5269": "Marta Nováková",
   "37E 1252": "Martina Matušková",
-  "2A5 2241": "Jan Král"}`
+  "2A5 2241": "Jan Král"
+}
+```

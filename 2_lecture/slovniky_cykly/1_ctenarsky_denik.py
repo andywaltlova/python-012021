@@ -18,11 +18,11 @@ books = [
 ]
 
 strany = 0
-strany_hodnoceni_8 = 0
+knihy_hodnoceni_8 = 0
 for book in books:
     if book['rating'] >= 8:
-        strany_hodnoceni_8 += book['pages']
+        knihy_hodnoceni_8 += 1
     strany += book['pages']
 
 print('Celkem stran:', strany)
-print('Stran s hodnocenim alespon 8:', strany_hodnoceni_8)
+print('Knihy s hodnocenim alespon 8:', knihy_hodnoceni_8)
