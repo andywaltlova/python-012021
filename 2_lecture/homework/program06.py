@@ -491,11 +491,22 @@ staty = [
 
 region = input('Zadej region: ')
 
-stat_nenalezen = True
-for stat in staty:
-    if stat['region'] == region:
-        stat_nenalezen = False
-        print(stat['name'])
+# stat_nenalezen = True
+# for stat in staty:
+#     if stat['region'] == region:
+#         stat_nenalezen = False
+#         print(stat['name'])
+#
+# if stat_nenalezen:
+#     print('Neznamy region')
 
-if stat_nenalezen:
+
+# Tomuto zapisu se rika list comprehension, uzitecne hlavne pokud chces
+# vytvorit rychle novy list jen s nekterymi hodnotami
+staty = [stat['name'] for stat in staty if stat['region'] == region]
+if not staty: # prazdny list je False, not False = True
     print('Neznamy region')
+else:
+    # join jen spoji vsechny staty carkou, spojeni pomoci '\n' by pak kazdy
+    # stat hodilo na zvlast radek
+    print(', '.join(staty))
