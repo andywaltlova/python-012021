@@ -5,10 +5,9 @@ def valid_telephone_number(number:str):
     if len(number) == 13 and number[:4] != '+420':
         return False
 
-    number = number.rstrip('+')
-    for num in number:
-        if not num.isdigit():
-            return False
+    str_number = number.rstrip('+')
+    if not str_number.isdigit():
+        return False
     return True
 
 def count_price_of_message(msg):
