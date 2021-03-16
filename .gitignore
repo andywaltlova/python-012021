@@ -2,3 +2,4 @@
 /jirka_github/*
 .gitignore
 hello.py
+**/.ipynb_checkpoints/*
