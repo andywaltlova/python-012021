@@ -4,7 +4,7 @@
 
 Repository for [semestral Python course](https://www.czechitas.cz/cs/kalendar-akci/akce/24752/2021/02/16), organized by [Czechitas](https://www.czechitas.cz/en/).
 
-Study materials are [here](https://kodim.cz/czechitas/progr2-python)(only in CZ).
+Study materials are [here](https://kodim.cz/czechitas/progr2-python) (only in CZ).
 
 - Week 01 - ✔️ Dictionaries
 - Week 02 - ✔️ Functions and dictionaries with loops
