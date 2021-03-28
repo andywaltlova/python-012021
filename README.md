@@ -11,7 +11,7 @@ Study materials are [here](https://kodim.cz/czechitas/progr2-python) (only in CZ
 - Week 03 - ✔️ Basics of OOP
 - Week 04 - ✔️ Inheritance
 - Week 05 - ✔️ Pandas - loading data and basic queries
-- Week 06 - TODO
+- Week 06 - ✔️ Pandas - merge,concat, groupby
 - Week 07 - TODO
 - Week 08 - TODO
 - Week 09 - TODO
