@@ -3,3 +3,4 @@
 .gitignore
 hello.py
 **/.ipynb_checkpoints/*
+**/.vscode/**
