@@ -1,6 +1,8 @@
-.idea/*
+**/.idea/**
 /jirka_github/*
 .gitignore
 hello.py
 **/.ipynb_checkpoints/*
 **/.vscode/**
+**/__pycache__/**
+**/venv/**

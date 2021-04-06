@@ -2,6 +2,6 @@ from django.http import HttpResponse
 from django.views import View
 
 
-class MujDruhyPohled(View):
+class MySecondView(View):
     def get(self, request):
-        return HttpResponse('Vítej v CRM systému Czechitas!')
+        return HttpResponse('Welcome to Czechitas CRM system!')
