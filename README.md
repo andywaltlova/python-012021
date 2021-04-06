@@ -12,7 +12,7 @@ Study materials are [here](https://kodim.cz/czechitas/progr2-python) (only in CZ
 - Week 04 - ✔️ Inheritance
 - Week 05 - ✔️ Pandas - loading data and basic queries
 - Week 06 - ✔️ Pandas - merge,concat, groupby
-- Week 07 - TODO
+- Week 07 - ✔️ Matplotlib - basic plot (bar,hist,box)
 - Week 08 - TODO
 - Week 09 - TODO
 - Week 10 - TODO
