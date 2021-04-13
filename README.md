@@ -13,8 +13,8 @@ Study materials are [here](https://kodim.cz/czechitas/progr2-python) (only in CZ
 - Week 05 - ✔️ Pandas - loading data and basic queries
 - Week 06 - ✔️ Pandas - merge,concat, groupby
 - Week 07 - ✔️ Matplotlib - basic plot (bar,hist,box)
-- Week 08 - TODO
-- Week 09 - TODO
+- Week 08 - ✔️ Django - init project
+- Week 09 - ✔️ Django - models, admin
 - Week 10 - TODO
 - Week 11 - TODO
 - Week 12 - TODO
