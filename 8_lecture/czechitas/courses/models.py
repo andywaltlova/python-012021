@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Courses(models.Model):
+class Course(models.Model):
     nazev = models.CharField(max_length=100)
     zacatek = models.DateTimeField()
     konec = models.DateTimeField()
