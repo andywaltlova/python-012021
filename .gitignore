@@ -6,3 +6,4 @@ hello.py
 **/.vscode/**
 **/__pycache__/**
 **/venv/**
+/nahravky

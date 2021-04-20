@@ -14,9 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.shortcuts import redirect
 from django.urls import include, path
 
 urlpatterns = [
+    # Redirect from http://127.0.0.1:8000/ to http://127.0.0.1:8000/courses
+    path('', lambda request: redirect('/courses/')),
     path('admin/', admin.site.urls),
     path('courses/', include("courses.urls")),
     path('crm/', include("crm.urls"))
