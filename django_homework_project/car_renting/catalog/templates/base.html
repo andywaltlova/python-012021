@@ -6,30 +6,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <style>
-    html {
-        font-family: 'Roboto', sans-serif;
-    }
+        html {
+            font-family: 'Roboto', sans-serif;
+        }
 
-    h1 {
-        text-align: center;
-    }
-    table {
-        margin-left: auto;
-        margin-right: auto;
-    }
+        h1 {
+            text-align: center;
+        }
 
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    th, td {
-        padding: 10px;
-    }
-</style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+{% url 'cars' as cars %}
+{% url 'loans' as loans %}
+{% url 'customers' as customers %}
+{% url 'index' as home %}
+<p style="text-align: center">
+    <a href="{{ home }}">Home</a> |
+    <a href="{{ cars }}">Cars</a> |
+    <a href="{{ loans }}">Loans</a> |
+    <a href="{{ customers }}">Customers</a>
+</p>
+
+
+{% block content %}
+{% endblock %}
 </body>
 </html>
