@@ -10,6 +10,12 @@ class Car(models.Model):
     def __str__(self):
         return f'{self.license_plate} ({self.car_type})'
 
+    @property
+    def days_from_last_tech_inspection(self):
+        now = timezone.now()  # Quite tricky to find
+
+        return now - self.last_tech_inspection
+
 
 class Customer(models.Model):
     first_name = models.CharField(max_length=100)

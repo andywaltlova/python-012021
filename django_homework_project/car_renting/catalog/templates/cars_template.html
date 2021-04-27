@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Cars</h1>
+<table>
+    <tr>
+        <th>License plate</th>
+        <th>Type</th>
+        <th>Mileage</th>
+        <th>Date of last technical inspection</th>
+        <th>Days from last technical inspection</th>
+    </tr>
+    {% for car in object_list %}
+    <tr>
+        <td> {{ car.license_plate }}</td>
+        <td> {{ car.car_type }}</td>
+        <td> {{ car.mileage }} Kč</td>
+        <td> {{ car.last_tech_inspection }}</td>
+        <td>{{car.days_from_last_tech_inspection}}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td> - </td>
+        <td> - </td>
+        <td> - Kč</td>
+        <td> - </td>
+        <td> - </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
