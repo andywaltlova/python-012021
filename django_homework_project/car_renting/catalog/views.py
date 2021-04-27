@@ -18,9 +18,13 @@ class IndexView(View):
 
 class CarsView(ListView):
     model = models.Car
-    template_name = 'cars_template.html'
+    template_name = 'car_template.html'
 
 
 class LoansView(ListView):
     model = models.LoanRecord
     template_name = 'loan_template.html'
+
+class CustomerView(ListView):
+    model = models.Customer
+    template_name = 'customer_template.html'

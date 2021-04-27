@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 class Car(models.Model):
     license_plate = models.CharField(max_length=100)
     car_type = models.CharField(max_length=100)
@@ -18,13 +19,21 @@ class Car(models.Model):
 
 
 class Customer(models.Model):
+    PROGRAMS = (
+        ('R', 'Regular'),
+        ('G', 'Gold'),
+        ('P', 'Platinum'),
+    )
+
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     driver_license_number = models.CharField(max_length=100)
     date_of_birth = models.DateField()
+    program = models.CharField(max_length=20, choices=PROGRAMS, null=True)
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
+
 
 class LoanRecord(models.Model):
     start = models.DateTimeField()
