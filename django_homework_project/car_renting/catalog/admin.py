@@ -3,4 +3,4 @@ from . import models
 
 admin.site.register(models.Car)
 admin.site.register(models.Customer)
-admin.site.register(models.Borrowing)
+admin.site.register(models.LoanRecord)
