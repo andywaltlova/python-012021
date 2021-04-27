@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils import timezone
 
 class Car(models.Model):
     license_plate = models.CharField(max_length=100)
@@ -30,3 +30,12 @@ class LoanRecord(models.Model):
     car = models.ForeignKey(Car, on_delete=models.SET_NULL, null=True)
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
 
+    @property
+    def state(self):
+        now = timezone.now()  # Quite tricky to find
+
+        if now > self.end:
+            return 'PAST'
+        elif now < self.start:
+            return 'FUTURE'
+        return 'CURRENT'

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Loans</h1>
+<table>
+    <tr>
+        <th>Start</th>
+        <th>End</th>
+        <th>Price</th>
+        <th>Car</th>
+        <th>Customer</th>
+        <th>State</th>
+    </tr>
+    {% for record in object_list %}
+    <tr>
+        <td> {{ record.start }}</td>
+        <td> {{ record.end }}</td>
+        <td> {{ record.price }} Kč</td>
+        <td> {{ record.car }}</td>
+        <td> {{ record.customer }}</td>
+        <td>{{record.state}}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td> - </td>
+        <td> - </td>
+        <td> - Kč</td>
+        <td> - </td>
+        <td> - </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
