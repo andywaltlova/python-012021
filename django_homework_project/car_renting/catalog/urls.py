@@ -7,5 +7,4 @@ urlpatterns = [
     path('cars/', views.CarsView.as_view(), name='cars'),
     path('loans/', views.LoansView.as_view(), name='loans'),
     path('customers/', views.CustomerView.as_view(), name='customers')
-
 ]
