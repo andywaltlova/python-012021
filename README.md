@@ -18,8 +18,8 @@ All Django tasks we did together in the lessons are available in a separate publ
 - Week 08 - ✔️ Django - init project [:movie_camera:](https://youtu.be/Ga-ksM3C-xM)
 - Week 09 - ✔️ Django - models, admin [:movie_camera:](https://youtu.be/Ga-ksM3C-xM)
 - Week 10 - ✔️ Django - templates, foreign keys [:movie_camera:](https://youtu.be/HOPF6CGVtls) [:movie_camera:](https://youtu.be/9Rwlze8teRo)
-- Week 11 - TODO
-- Week 12 - TODO
+- Week 11 - ✔️ Django - templates,forms
+- Week 12 - ✔️ Django - forms [:movie_camera:](https://youtu.be/D3m9ZqmvkHo)
 
 
 **Lecturer's repository for task assignment [here](https://github.com/pesikj/python-012021).**
