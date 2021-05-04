@@ -3,6 +3,9 @@
 {% block content %}
 
 <h1>Loans</h1>
+<h3>Want to add loan?</h2>
+    <p>You can do it <a href="{% url 'create_loan' %}">here</a></p>
+    <br>
 <table>
     <tr>
         <th>Start</th>
@@ -11,6 +14,7 @@
         <th>Car</th>
         <th>Customer</th>
         <th>State</th>
+        <th>Detail</th>
     </tr>
     {% for record in object_list %}
     <tr>
@@ -20,6 +24,7 @@
         <td> {{ record.car }}</td>
         <td> {{ record.customer }}</td>
         <td>{{record.state}}</td>
+        <td><a href="{% url 'loan_detail' record.pk %}">link</a></td>
     </tr>
     {% empty %}
     <tr>

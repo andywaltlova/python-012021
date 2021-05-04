@@ -1,16 +1,15 @@
+{% load bootstrap4 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Czechitas</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <style>
-        html {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        h1 {
+        h1,h2,h3,p {
             text-align: center;
         }
 
@@ -26,6 +25,10 @@
 
         th, td {
             padding: 10px;
+        }
+        .create-car{
+            padding: 0 10%;
+            text-align: center;
         }
     </style>
 </head>

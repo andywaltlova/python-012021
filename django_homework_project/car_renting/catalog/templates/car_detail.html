@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Car</h1>
+<h2>License plate</h2>
+<p>{{object.license_plate}}</p>
+<h2>Type</h2>
+<p>{{object.car_type}}</p>
+<h2>Mileage</h2>
+<p>{{object.mileage}}</p>
+<h2>Days from last technical inspection</h2>
+<p>{{object.days_from_last_tech_inspection}}</p>
+{% endblock %}

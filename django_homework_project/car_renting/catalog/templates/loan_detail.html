@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Loan</h1>
+<h2>Date</h2>
+<p>{{object.start}} - {{object.end}}</p>
+<h2>Price</h2>
+<p>{{object.price}} Kč</p>
+<h2>Car</h2>
+<p>{{object.car}}</p>
+<h2>Customer</h2>
+<p><a href="{% url 'customer_detail' object.customer.pk %}">customer detail</a></p>
+<h2>State</h2>
+<p>{{object.state}}</p>
+{% endblock %}

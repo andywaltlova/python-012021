@@ -1,45 +1,55 @@
 from django.http import HttpResponse
 from django.views import View
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView, CreateView, TemplateView
 from . import models
+from django.urls import reverse_lazy
 
 
-class IndexView(View):
-    def get(self, request):
-        return HttpResponse(
-            """
-    <head>
-    <meta charset="UTF-8">
-    <title>Czechitas</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <style>
-        html {font-family: 'Roboto', sans-serif;}
-        h1 {text-align: center;}
-    </style>
-    </head>
-    <p style="text-align: center">
-    <a href="http://127.0.0.1:8000/catalog/">Home</a> |
-    <a href="http://127.0.0.1:8000/catalog/cars">Cars</a> |
-    <a href="http://127.0.0.1:8000/catalog/loans">Loans</a> |
-    <a href="http://127.0.0.1:8000/catalog/customers">Customers</a>
-    </p>
-    <h1 style='text-align:center'>Welcome to our car rental!</h1>
-    <p style='text-align:center'>Our rental shop was established in 2011 and today offers approximately 30 cars.</p>
-    """
-        )
+class IndexView(TemplateView):
+    template_name = "index.html"
 
 
 class CarsView(ListView):
     model = models.Car
     template_name = 'car_template.html'
 
+class CarDetailView(DetailView):
+    model = models.Car
+    template_name = "car_detail.html"
+
+
+class CreateCar(CreateView):
+    model = models.Car
+    template_name = "create_car/create_car.html"
+    fields = ["license_plate", "car_type", "mileage", "last_tech_inspection"]
+    success_url = reverse_lazy('car_added')
+
+class CarAdded(TemplateView):
+    template_name = "create_car/ack_car.html"
 
 class LoansView(ListView):
     model = models.LoanRecord
     template_name = 'loan_template.html'
 
 
+class LoanDetailView(DetailView):
+    model = models.LoanRecord
+    template_name = "loan_detail.html"
+
+class CreateLoan(CreateView):
+    model = models.LoanRecord
+    template_name = "create_loan/create_loan.html"
+    fields = ["start", "end", "price", "car", "customer"]
+    success_url = reverse_lazy('loan_added')
+
+class LoanAdded(TemplateView):
+    template_name = "create_loan/ack_loan.html"
+
 class CustomerView(ListView):
     model = models.Customer
     template_name = 'customer_template.html'
+
+
+class CustomerDetailView(DetailView):
+    model = models.Customer
+    template_name = "customer_detail.html"
