@@ -9,6 +9,7 @@
     <br>
     <table>
         <tr>
+            <th>Approved</th>
             <th>Start</th>
             <th>End</th>
             <th>Price</th>
@@ -19,6 +20,13 @@
         </tr>
         {% for record in object_list %}
         <tr>
+            <td>
+                {% if not record.is_approved %}
+                X
+                {% else %}
+                OK
+                {% endif %}
+            </td>
             <td> {{ record.start }}</td>
             <td> {{ record.end }}</td>
             <td> {{ record.price }} Kč</td>

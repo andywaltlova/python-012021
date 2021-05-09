@@ -39,11 +39,13 @@ class LoanRecord(models.Model):
     start = models.DateTimeField()
     end = models.DateTimeField()
     price = models.IntegerField()
+    is_approved = models.BooleanField(default=False)
 
     # Foregin keys are here, because both relation are 1:N
     # (record refers to one car, but car can have multiple associated records)
     car = models.ForeignKey(Car, on_delete=models.SET_NULL, null=True)
-    customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
+    customer = models.ForeignKey(
+        Customer, on_delete=models.SET_NULL, null=True)
 
     @property
     def state(self):
