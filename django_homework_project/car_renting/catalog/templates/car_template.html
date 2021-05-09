@@ -3,36 +3,37 @@
 {% block content %}
 
 <h1>Cars</h1>
-<h3>Want to add cars?</h2>
-<p>You can do it <a href="{% url 'create_car' %}">here</a></p>
-<br>
-<table>
-    <tr>
-        <th>License plate</th>
-        <th>Type</th>
-        <th>Mileage</th>
-        <th>Date of last technical inspection</th>
-        <th>Days from last technical inspection</th>
-        <th>Details</th>
-    </tr>
-    {% for car in object_list %}
-    <tr>
-        <td> {{ car.license_plate }}</td>
-        <td> {{ car.car_type }}</td>
-        <td> {{ car.mileage }} Kč</td>
-        <td> {{ car.last_tech_inspection }}</td>
-        <td>{{car.days_from_last_tech_inspection}}</td>
-        <td><a href="{% url 'car_detail' car.pk %}">link</a></td>
-    </tr>
-    {% empty %}
-    <tr>
-        <td> - </td>
-        <td> - </td>
-        <td> - Kč</td>
-        <td> - </td>
-        <td> - </td>
-    </tr>
-    {% endfor %}
-</table>
+<br />
+<h5>Want to add cars?</h2>
+    <p>You can do it <a href="{% url 'create_car' %}">here</a></p>
+    <br>
+    <table>
+        <tr>
+            <th>License plate</th>
+            <th>Type</th>
+            <th>Mileage</th>
+            <th>Date of last technical inspection</th>
+            <th>Days from last technical inspection</th>
+            <th>Details</th>
+        </tr>
+        {% for car in object_list %}
+        <tr>
+            <td> {{ car.license_plate }}</td>
+            <td> {{ car.car_type }}</td>
+            <td> {{ car.mileage }} Km</td>
+            <td> {{ car.last_tech_inspection }}</td>
+            <td>{{car.days_from_last_tech_inspection}}</td>
+            <td><a href="{% url 'car_detail' car.pk %}">Link</a></td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td> - </td>
+            <td> - </td>
+            <td> - Kč</td>
+            <td> - </td>
+            <td> - </td>
+        </tr>
+        {% endfor %}
+    </table>
 
-{% endblock %}
+    {% endblock %}

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1>Cars</h1>
+<h1>Customers</h1>
 <table>
     <tr>
         <th>Name</th>
@@ -13,7 +13,7 @@
     {% for c in object_list %}
     <tr>
         <td> <a href="{% url 'customer_detail' c.pk %}">{{ c.first_name }} {{ c.last_name }}</a></td>
-        <td> {{ c.driver_license_number }} Kč</td>
+        <td> {{ c.driver_license_number }}</td>
         <td> {{ c.date_of_birth }}</td>
         <td> {{ c.program }}</td>
 

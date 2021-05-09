@@ -5,11 +5,16 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Czechitas</title>
     <style>
-        h1,h2,h3,p {
+        h1,
+        h2,
+        h3,
+        h5,
+        p {
             text-align: center;
         }
 
@@ -18,34 +23,60 @@
             margin-right: auto;
         }
 
-        table, th, td {
+        table,
+        th,
+        td {
             border: 1px solid black;
             border-collapse: collapse;
         }
 
-        th, td {
+        th,
+        td {
             padding: 10px;
         }
-        .create-car{
+
+        .create-car {
             padding: 0 10%;
             text-align: center;
         }
+
+        .menu {
+            font-size: 24px;
+
+        }
+
+        a {
+            color: deeppink;
+        }
+
+        a:hover {
+            color: midnightblue;
+            text-decoration: none;
+        }
     </style>
 </head>
+
 <body>
-{% url 'cars' as cars %}
-{% url 'loans' as loans %}
-{% url 'customers' as customers %}
-{% url 'index' as home %}
+    {% url 'cars' as cars %}
+    {% url 'loans' as loans %}
+    {% url 'customers' as customers %}
+    {% url 'index' as home %}
+    <p>
+        <a href="https://www.czechitas.cz/">
+            <img src="https://cdn.myshoptet.com/usr/www.shop-czechitas.cz/user/logos/logo.png" alt="Czechitas logo"
+                width="250" />
+        </a>
+    </p>
+    <p class="menu">
+        <a href="{{ home }}">Home</a> |
+        <a href="{{ cars }}">Cars</a> |
+        <a href="{{ loans }}">Loans</a> |
+        <a href="{{ customers }}">Customers</a>
+    </p>
 
-<p style="text-align: center">
-    <a href="{{ home }}">Home</a> |
-    <a href="{{ cars }}">Cars</a> |
-    <a href="{{ loans }}">Loans</a> |
-    <a href="{{ customers }}">Customers</a>
-</p>
 
-{% block content %}
-{% endblock %}
+    {% block content %}
+    {% endblock %}
 </body>
+
 </html>
