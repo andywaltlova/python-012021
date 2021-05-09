@@ -22,7 +22,7 @@
             <td> {{ car.car_type }}</td>
             <td> {{ car.mileage }} Km</td>
             <td> {{ car.last_tech_inspection }}</td>
-            <td>{{car.days_from_last_tech_inspection}}</td>
+            <td>{{car.days_from_last_tech_inspection}} days</td>
             <td><a href="{% url 'car_detail' car.pk %}">Link</a></td>
         </tr>
         {% empty %}

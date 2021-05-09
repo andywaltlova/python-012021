@@ -14,8 +14,8 @@ class Car(models.Model):
     @property
     def days_from_last_tech_inspection(self):
         now = timezone.now()  # Quite tricky to find
-
-        return now - self.last_tech_inspection
+        result = now - self.last_tech_inspection
+        return result.days
 
 
 class Customer(models.Model):
